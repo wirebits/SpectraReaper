@@ -7,6 +7,8 @@ A tool that deauth 2.4GHz and 5GHz Wi-Fi networks via BW16 on serial console.
 - Minimal Setup.
 - Easily controlled by Serial Console.
 - It deauthenticates 2.4GHz and 5GHz WiFi networks both.
+- It deauthenticates multiple networks at the same time.
+- It can switch and add more networks during deauthentication.
 
 # Hardware Requirements
 - Ai-Thinker BW16 RTL8720DN Development Board
@@ -52,4 +54,6 @@ A tool that deauth 2.4GHz and 5GHz Wi-Fi networks via BW16 on serial console.
 # Indicators
 - 🔵 - The BW16 scanning for nearby wifi networks.
 - 🟢 - The BW16 board is ready to deauth.
-- 🔴 - The BW16 board is sending deauthentication frames.
+- 🔴 - The BW16 board is sending deauthentication frames to 2.4GHz networks.
+- 🟡 - The BW16 board is sending deauthentication frames to 5GHz networks.
+- 🟣 - The BW16 board is sending deauthentication frames to 2.4GHz and 5GHz networks both.
