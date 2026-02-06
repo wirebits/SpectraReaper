@@ -12,7 +12,7 @@
 #include <WiFiClient.h>
 #include <wifi_structures.h>
 
-#define FRAMES_PER_DEAUTH 10
+#define FRAMES_PER_DEAUTH 20
 
 extern uint8_t* rltk_wlan_info;
 extern "C" void* alloc_mgtxmitframe(void* ptr);
