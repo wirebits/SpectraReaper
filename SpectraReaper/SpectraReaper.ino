@@ -88,11 +88,11 @@ void startShowScannedNetworks() {
   if (scanNetworks() == 0) {
     is_scanning = true;
     Serial.println("[*] Scanned WiFi Networks:");
+    Serial.println("┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈");
     for (int i = 0; i < scan_results.size(); i++) {
       String frequency = (scan_results[i].channel <= 14) ? "2.4GHz" : "5GHz";
       char indexStr[3];
       snprintf(indexStr, sizeof(indexStr), "%02d", i);
-      Serial.println("┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈");
       Serial.print("[" + String(indexStr) + "] - SSID    : "); Serial.println(scan_results[i].ssid);
       Serial.print("       BSSID   : "); Serial.println(scan_results[i].bssid_str);
       Serial.print("       Channel : "); Serial.println(scan_results[i].channel);
@@ -103,6 +103,7 @@ void startShowScannedNetworks() {
   } else {
     Serial.println("[!] Scanning Failed!");
   }
+  Serial.println("[*] Scanning Completed!");
 }
 
 void sendWifiRawManagementFrames(void* frame, size_t length) {
